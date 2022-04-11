@@ -6,6 +6,8 @@ import 'package:latihansoal/constants/r.dart';
 import 'package:latihansoal/view/login_page.dart';
 import 'package:latihansoal/view/main_page.dart';
 
+
+
 class RegisterPage extends StatefulWidget {
   RegisterPage({Key? key}) : super(key: key);
   static String route ="register_page";
@@ -22,7 +24,8 @@ class _RegisterPageState extends State<RegisterPage> {
   List<String> classSlta = ["10", "11","12"];
   String selectedClass = "10";
 
- 
+  final emailController = TextEditingController();
+
     onTapGender(Gender genderInput){
 
       if (genderInput == Gender.lakiLaki){
@@ -56,6 +59,7 @@ class _RegisterPageState extends State<RegisterPage> {
             padding: const EdgeInsets.only(bottom: 20.0),
             child: ButtonLogin(
                     onTap: () {
+                      print(emailController.text);
                       Navigator.of(context).pushNamed(MainPage.route);
                     },
                     backgroundColor: R.colors.primary,
@@ -77,6 +81,7 @@ class _RegisterPageState extends State<RegisterPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children:  [
             RegisterTextField(
+              controller: emailController,
               hintText: "Email Anda", 
               title: "Email",
               ),
@@ -221,10 +226,11 @@ class RegisterTextField extends StatelessWidget {
   const RegisterTextField({
     Key? key,
     required this.title,
-    required this.hintText,
+    required this.hintText, this.controller,
   }) : super(key: key);
   final String title;
   final String hintText;
+  final TextEditingController? controller;
 
   @override
   Widget build(BuildContext context) {
@@ -249,6 +255,7 @@ class RegisterTextField extends StatelessWidget {
             )
           ),
           child: TextField(
+            controller: controller,
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: hintText,
