@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:latihansoal/view/login_page.dart';
+import 'package:latihansoal/view/main_page.dart';
+import 'package:latihansoal/view/register_page.dart';
 import 'package:latihansoal/view/splash_screen.dart' show SplashScreen;
 
 void main() {
@@ -25,7 +28,14 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      initialRoute: SplashScreen.route,
+      routes: {
+        SplashScreen.route: (context) => SplashScreen(),
+        LoginPage.route: (context) => const LoginPage(),
+        RegisterPage.route: (context) =>  RegisterPage(),
+        MainPage.route:(context)=>  MainPage(),
+      },
     );
   }
 }
