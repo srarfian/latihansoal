@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:latihansoal/constants/r.dart';
 import 'package:latihansoal/view/register_page.dart';
 
@@ -10,11 +11,11 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: R.colors.grey,
+      backgroundColor: Color(0xfff3f7f8),
       body: SafeArea(
         child: 
         Padding(
-          padding: const EdgeInsets.all(32.0),
+          padding: const EdgeInsets.all(25.0),
           child: Column(
             children:[
               Align(
@@ -33,17 +34,17 @@ class LoginPage extends StatelessWidget {
 
               Text(
                 R.strings.welcome,
-                style: TextStyle (
+                style: GoogleFonts.poppins().copyWith(
                   fontSize: 22,
                   fontWeight: FontWeight.w500,
-                  )
                 ),
+              ),
               
               Text(
                 R.strings.loginDescription,
                 textAlign: TextAlign.center ,
                 style: TextStyle (
-                  fontSize: 18,
+                  fontSize: 14,
                   fontWeight: FontWeight.w500,
                   color: R.colors.greysubtitle,
                   )
@@ -64,7 +65,7 @@ class LoginPage extends StatelessWidget {
                         Text(
                           R.strings.loginWithGoogle,
                           style: TextStyle(
-                            fontSize: 17,
+                            fontSize: 15,
                             fontWeight: FontWeight.w500,
                             color: R.colors.blacklogin,
                           ),
@@ -84,9 +85,9 @@ class LoginPage extends StatelessWidget {
                         Image.asset(R.assets.icApple),
                         SizedBox(width: 10),
                         Text(
-                          R.strings.loginWithGoogle,
+                          R.strings.loginWithApple,
                           style: TextStyle(
-                            fontSize: 17,
+                            fontSize: 15,
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
                           ),

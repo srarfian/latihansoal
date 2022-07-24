@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "333085360453",
+    "project_id": "latihansoal-edspert",
+    "storage_bucket": "latihansoal-edspert.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333085360453:android:6ec3f17ed48f92a9bf3e2c",
+        "android_client_info": {
+          "package_name": "com.example.latihansoal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333085360453-ulbk9jt5uskhld4hkrt1l6r5k4itdcmn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeD405x9IeeVKyP9MqNpSCw5r3Ctg0KQs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333085360453-ulbk9jt5uskhld4hkrt1l6r5k4itdcmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

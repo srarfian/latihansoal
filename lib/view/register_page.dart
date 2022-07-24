@@ -40,18 +40,28 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        elevation: 0, //shadow appbar hilang 
-        backgroundColor: Colors.white,
-        iconTheme: IconThemeData(color: Colors.black),
-        title: Text(
-            "Yuk Isi data diri!",
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w700,
-              fontSize: 18,
-            ),
-            ),
+      backgroundColor: Color(0xfff0f3f5),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(kToolbarHeight + 20),
+        child: AppBar(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(25.0),
+              bottomRight: Radius.circular(25.0)
+            )
+          ),
+          elevation: 0, //shadow appbar hilang 
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+          title: Text(
+              "Yuk Isi data diri!",
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w700,
+                fontSize: 18,
+              ),
+              ),
+        ),
       ),
       bottomNavigationBar: 
         SafeArea(
@@ -60,7 +70,7 @@ class _RegisterPageState extends State<RegisterPage> {
             child: ButtonLogin(
                     onTap: () {
                       print(emailController.text);
-                      Navigator.of(context).pushNamed(MainPage.route);
+                      Navigator.of(context).pushNamedAndRemoveUntil(MainPage.route, (context)=>false);
                     },
                     backgroundColor: R.colors.primary,
                     borderColor: R.colors.primary, 
@@ -141,7 +151,7 @@ class _RegisterPageState extends State<RegisterPage> {
                         elevation: 0,
                         primary: gender == "Perempuan" 
                                  ? R.colors.primary 
-                                 : Colors.white,
+                                 : Colors.white, 
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8),
                           side: BorderSide(

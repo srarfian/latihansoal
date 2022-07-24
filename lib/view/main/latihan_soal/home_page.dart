@@ -12,11 +12,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          Text("HOME"),
-        ],
+      
+      body: SafeArea(
+        child: Column(
+          children: [
+            Text("HOME"),
+          ],
+        ),
       ),
     );
   }

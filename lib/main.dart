@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:latihansoal/view/login_page.dart';
 import 'package:latihansoal/view/main_page.dart';
 import 'package:latihansoal/view/register_page.dart';
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Latihan Soal',
       theme: ThemeData(
+        textTheme: GoogleFonts.poppinsTextTheme(),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
